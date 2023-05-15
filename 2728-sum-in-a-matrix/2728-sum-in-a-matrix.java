@@ -19,7 +19,6 @@ class Solution {
             nums[i][ind]=0;
                 max=Math.max(max1,max);
             }
-            System.out.println(max);
             sum+=max;
         }
         return sum;
