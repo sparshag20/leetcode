@@ -5,13 +5,13 @@ class Solution {
         }
         StringBuilder sb=new StringBuilder(s);
         for(char c:t.toCharArray()){
-            if(sb.isEmpty()){
-                return true;
-            }
             if(c==sb.charAt(0)){
                 sb.deleteCharAt(0);
             }
+            if(sb.isEmpty()){
+                return true;
+            }
         }
-        return sb.isEmpty()?true:false;
+        return false;
     }
 }
