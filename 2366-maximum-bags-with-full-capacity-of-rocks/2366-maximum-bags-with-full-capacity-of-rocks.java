@@ -3,13 +3,7 @@ class Solution {
         PriorityQueue<Integer> pq=new PriorityQueue<>();
         int count=0;
         for(int i=0;i<rocks.length;i++){
-            int diff=capacity[i]-rocks[i];
-            if(diff==0){
-                count++;
-            }
-            else{
-                pq.add(diff);
-            }
+            pq.add(capacity[i]-rocks[i]);
         }
         
         while(!pq.isEmpty() && ar!=0){
