@@ -1,7 +1,6 @@
 class Solution {
     public int minimumRounds(int[] tasks) {
         HashMap<Integer,Integer> hm=new HashMap<>();
-        Arrays.sort(tasks);
         int n=tasks.length;
         for(int i=0;i<n;i++){
             hm.put(tasks[i],hm.getOrDefault(tasks[i],0)+1);
