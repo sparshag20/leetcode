@@ -5,7 +5,6 @@ class Solution {
         String k="";
         String m="";
         for(int i=0;i<s.length();i++){
-            
             if(s.charAt(i)==g.charAt(i)){
                  bull++;
             }
@@ -13,17 +12,9 @@ class Solution {
                 k=k+s.charAt(i);
                 m=m+g.charAt(i);
             }
-           /* else{
-                if(ind!=-1){
-                    cow++;
-                    sb.deleteCharAt(ind);
-                }
-            }*/
         }
         StringBuilder sb=new StringBuilder(k);
-         StringBuilder sb2=new StringBuilder(m);
-        //System.out.println(sb2);
-       // System.out.println(sb);
+        StringBuilder sb2=new StringBuilder(m);
         for(int i=0;i<sb2.length();i++){
             int ind=sb.indexOf(""+sb2.charAt(i));
             if(ind!=-1){
@@ -31,7 +22,6 @@ class Solution {
                 sb.deleteCharAt(ind);
             }
         }
-
         return bull+"A"+cow+"B";
     }
 }
