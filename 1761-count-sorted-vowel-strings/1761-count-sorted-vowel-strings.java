@@ -1,5 +1,5 @@
 class Solution {
-    public int count=0;
+    int count=0;
     public int countVowelStrings(int n) {
         char c[]={'a','e','i','o','u'};
         StringBuilder sb=new StringBuilder();
