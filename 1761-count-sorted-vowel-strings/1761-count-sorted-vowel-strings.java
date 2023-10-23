@@ -1,23 +1,23 @@
 class Solution {
-    int count=0;
+    public int count=0;
     public int countVowelStrings(int n) {
         char c[]={'a','e','i','o','u'};
         StringBuilder sb=new StringBuilder();
-        return countV(c,0,count,sb,n);
-        //return count;
+        countV(c,0,sb,n);
+        return count;
     }
-    public int countV(char[] c,int ind,int count,StringBuilder sb,int n){
+    public void countV(char[] c,int ind,StringBuilder sb,int n){
         if(ind>=c.length){
-            return 0;
+            return;
         }
         if(sb.length()==n){
-            count++;
-            return count;
+            count+=1;
+            return;
         }
         sb.append(c[ind]);
-        int a=countV(c,ind,count,sb,n);
+        countV(c,ind,sb,n);
         sb.deleteCharAt(sb.length()-1);
-        int b=countV(c,ind+1,count,sb,n);
-        return a+b;
+        countV(c,ind+1,sb,n);
+        return;
     }
 }
